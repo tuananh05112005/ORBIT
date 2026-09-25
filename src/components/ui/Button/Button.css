@@ -1,0 +1,106 @@
+.orbit-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Sizes */
+.orbit-btn--sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+
+.orbit-btn--md {
+  padding: 0.85rem 1.6rem;
+  font-size: 0.8125rem;
+}
+
+.orbit-btn--lg {
+  padding: 1.1rem 2.2rem;
+  font-size: 0.875rem;
+}
+
+/* Primary Variant: high contrast, aerospace minimal */
+.orbit-btn--primary {
+  background: #ffffff;
+  color: #050505;
+  border: 1px solid #ffffff;
+}
+
+.orbit-btn--primary:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #050505;
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.4);
+}
+
+/* Secondary Variant: subtle outline, high-tech glass */
+.orbit-btn--secondary {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--color-text);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+}
+
+.orbit-btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-accent);
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+}
+
+/* Accent Outline */
+.orbit-btn--accent {
+  background: var(--color-accent-dim);
+  color: var(--color-accent);
+  border: 1px solid rgba(0, 229, 255, 0.35);
+}
+
+.orbit-btn--accent:hover {
+  background: var(--color-accent);
+  color: #050505;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.35);
+}
+
+/* Ghost */
+.orbit-btn--ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid transparent;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.orbit-btn--ghost:hover {
+  color: var(--color-accent);
+}
+
+/* Icon micro-interaction */
+.orbit-btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+}
+
+.orbit-btn:hover .orbit-btn__icon {
+  transform: translateX(4px);
+}
+
+.orbit-btn--ghost:hover .orbit-btn__icon {
+  transform: translateX(6px);
+}

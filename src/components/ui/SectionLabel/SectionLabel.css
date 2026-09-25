@@ -1,0 +1,53 @@
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 1.25rem;
+  user-select: none;
+}
+
+.section-label--center {
+  justify-content: center;
+  width: 100%;
+}
+
+.section-label__pulse {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-accent);
+  display: inline-block;
+  animation: pulse-badge 2.4s infinite ease-in-out;
+}
+
+.section-label__num {
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+.section-label__divider {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.section-label__text {
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@keyframes pulse-badge {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+}

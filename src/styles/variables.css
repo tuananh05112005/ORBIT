@@ -1,0 +1,50 @@
+:root {
+  /* Colors */
+  --color-bg: #050505;
+  --color-bg-alt: #0a0a0a;
+  --color-surface: #101214;
+  --color-surface-hover: #171b1f;
+  --color-surface-glass: rgba(14, 16, 20, 0.72);
+  --color-surface-border: rgba(255, 255, 255, 0.08);
+  --color-border-glow: rgba(0, 229, 255, 0.24);
+
+  --color-text: #F3F4F6;
+  --color-text-secondary: #9CA3AF;
+  --color-muted: #6B7280;
+  --color-accent: #00E5FF;
+  --color-accent-hover: #33EBFF;
+  --color-accent-dim: rgba(0, 229, 255, 0.12);
+  --color-cyan: #00F0FF;
+  --color-deep-blue: #002244;
+  --color-alert-cyan: #38BDF8;
+
+  /* Typography */
+  --font-primary: 'Inter', 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Space Grotesk', 'Be Vietnam Pro', 'Inter', -apple-system, sans-serif;
+  --font-brand: 'Syne', 'Space Grotesk', 'Be Vietnam Pro', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 3.5rem;
+  --space-2xl: 5.5rem;
+  --space-3xl: 8rem;
+
+  /* Container */
+  --container-max: 1320px;
+  --container-pad: clamp(1.25rem, 4vw, 3rem);
+
+  /* Radius */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  /* Transitions */
+  --transition-fast: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}

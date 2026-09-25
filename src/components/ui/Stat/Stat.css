@@ -1,0 +1,61 @@
+.orbit-stat {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 1.5rem;
+  transition: border-color var(--transition-fast);
+}
+
+.orbit-stat:hover {
+  border-left-color: var(--color-accent);
+}
+
+.orbit-stat__value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.15rem;
+  font-family: var(--font-display);
+  line-height: 1;
+  color: #ffffff;
+}
+
+.orbit-stat__num {
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+
+.orbit-stat__prefix,
+.orbit-stat__suffix {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.orbit-stat__unit {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.1em;
+  margin-left: 0.35rem;
+  font-weight: 500;
+}
+
+.orbit-stat__label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  margin-top: 0.85rem;
+}
+
+.orbit-stat__desc {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  margin-top: 0.4rem;
+  line-height: 1.5;
+  max-width: 320px;
+}
