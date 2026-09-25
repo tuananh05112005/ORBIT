@@ -65,7 +65,7 @@ export default function Mission() {
 
               <div className="mission-card">
                 <div className={`mission-badge mission-badge--${mission.statusType}`}>
-                  ? {mission.status}
+                  ● {mission.status}
                 </div>
                 <div className="mission-code">{mission.code}</div>
                 <h3 className="mission-title">{mission.name}</h3>

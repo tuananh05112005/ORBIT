@@ -14,16 +14,29 @@ html {
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100vw;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
-  overflow-x: hidden;
+  overflow-x: clip;
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
   line-height: 1.6;
+  max-width: 100vw;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root,
+.orbit-app,
+.orbit-main-wrapper {
+  overflow-x: clip;
+  max-width: 100vw;
+  width: 100%;
 }
 
 /* Custom Scrollbar */
@@ -51,6 +64,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-touch-callout: none;
 }
 
 button {
@@ -59,11 +73,17 @@ button {
   font: inherit;
   color: inherit;
   cursor: pointer;
+  -webkit-touch-callout: none;
 }
 
 img, svg {
   display: block;
   max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* Container */
@@ -72,8 +92,8 @@ img, svg {
   max-width: var(--container-max);
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--container-pad);
-  padding-right: var(--container-pad);
+  padding-left: max(var(--container-pad), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--container-pad), env(safe-area-inset-right, 0px));
 }
 
 /* Common Layout Utilities */

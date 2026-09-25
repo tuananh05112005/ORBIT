@@ -1,13 +1,14 @@
 .hero-section {
   position: relative;
   width: 100%;
-  height: 100vh;
-  height: 100svh;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   overflow: hidden;
   background-color: var(--color-bg);
   z-index: 2;
+  padding: max(6.5rem, calc(4.5rem + env(safe-area-inset-top, 0px))) 0 3.5rem 0;
 }
 
 /* 3D Canvas Container */
@@ -46,7 +47,7 @@
   position: relative;
   z-index: 10;
   max-width: 680px;
-  padding-top: 3rem;
+  padding-top: 2rem;
 }
 
 .hero-badge {
@@ -57,7 +58,7 @@
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-xs);
-  margin-bottom: 2rem;
+  margin-bottom: clamp(1.25rem, 2.5vh, 2rem);
 }
 
 .hero-badge__dot {
@@ -80,13 +81,15 @@
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(3.25rem, 8vw, 6.75rem);
+  font-size: clamp(2.25rem, 7.5vw, 6.75rem);
   font-weight: 700;
-  line-height: 0.95;
+  line-height: 0.98;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: #ffffff;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .hero-title span {
@@ -99,11 +102,11 @@
 }
 
 .hero-subtext {
-  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-size: clamp(0.95rem, 1.8vw, 1.25rem);
   color: var(--color-text-secondary);
   line-height: 1.6;
   max-width: 480px;
-  margin-bottom: 2.75rem;
+  margin-bottom: clamp(1.75rem, 3.5vh, 2.75rem);
   font-weight: 300;
 }
 
@@ -198,9 +201,36 @@
 @media (max-width: 980px) {
   .hero-content {
     max-width: 100%;
-    padding-top: 5rem;
+    padding-top: 3rem;
   }
   .hero-hud {
     display: none;
+  }
+}
+
+@media (max-height: 700px), (max-width: 768px) {
+  .hero-scroll-indicator {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding-top: max(5.5rem, calc(4rem + env(safe-area-inset-top, 0px)));
+    padding-bottom: 2.5rem;
+  }
+  .hero-content {
+    padding-top: 1.25rem;
+  }
+  .hero-title {
+    font-size: clamp(2rem, 9.2vw, 2.75rem);
+    letter-spacing: -0.03em;
+    line-height: 1.02;
+  }
+  .hero-ctas {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.85rem;
   }
 }

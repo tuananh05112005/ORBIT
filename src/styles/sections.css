@@ -15,13 +15,14 @@
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5vw, 4.25rem);
+  font-size: clamp(1.85rem, 5vw, 4.25rem);
   font-weight: 700;
   letter-spacing: -0.03em;
-  line-height: 1.05;
+  line-height: 1.08;
   color: #ffffff;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
+  overflow-wrap: break-word;
 }
 
 .section-desc {
@@ -80,12 +81,13 @@
 
 .intro-heading {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 8.5vw, 7.5rem);
+  font-size: clamp(2.15rem, 8vw, 7.5rem);
   font-weight: 800;
-  line-height: 0.96;
+  line-height: 0.98;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: #ffffff;
+  overflow-wrap: break-word;
 }
 
 .intro-line {
@@ -794,13 +796,14 @@
 
 .cinematic-heading {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 7.5vw, 6.5rem);
+  font-size: clamp(2.15rem, 7vw, 6.5rem);
   font-weight: 800;
   line-height: 0.98;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 2rem;
+  overflow-wrap: break-word;
 }
 
 /* ===================================================
@@ -822,12 +825,13 @@
 }
 
 .about-manifesto {
-  font-size: clamp(1.25rem, 2.2vw, 1.85rem);
+  font-size: clamp(1.1rem, 2.2vw, 1.85rem);
   color: #ffffff;
   line-height: 1.45;
   font-weight: 400;
   margin-bottom: 2rem;
   letter-spacing: -0.01em;
+  overflow-wrap: break-word;
 }
 
 .about-body {
@@ -881,13 +885,14 @@
 
 .final-cta-heading {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 7.5vw, 6.25rem);
+  font-size: clamp(2.15rem, 7vw, 6.25rem);
   font-weight: 800;
   line-height: 0.98;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 1.5rem;
+  overflow-wrap: break-word;
 }
 
 .final-cta-sub {
@@ -1008,7 +1013,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: max(1rem, env(safe-area-inset-top, 0px)) max(1rem, env(safe-area-inset-right, 0px)) max(1rem, env(safe-area-inset-bottom, 0px)) max(1rem, env(safe-area-inset-left, 0px));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .contact-modal-dialog {
@@ -1016,17 +1023,25 @@
   border: 1px solid rgba(0, 229, 255, 0.3);
   border-radius: var(--radius-sm);
   width: min(100%, 540px);
-  padding: 2.75rem;
+  max-height: min(92vh, 92dvh);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: clamp(1.5rem, 5vw, 2.75rem);
   position: relative;
+  margin: auto;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 229, 255, 0.15);
 }
 
 .contact-modal-close {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 1.25rem;
+  right: 1.25rem;
   color: var(--color-muted);
   cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: color var(--transition-fast);
 }
 
@@ -1037,8 +1052,8 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  margin-top: 1.75rem;
+  gap: 1.15rem;
+  margin-top: 1.5rem;
 }
 
 .contact-field {
@@ -1062,9 +1077,17 @@
   padding: 0.8rem 1rem;
   color: #ffffff;
   font-family: var(--font-primary);
-  font-size: 0.9375rem;
+  font-size: 16px; /* Prevents auto-zoom on iOS */
   border-radius: var(--radius-xs);
   transition: border-color var(--transition-fast);
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .contact-input,
+  .contact-textarea {
+    font-size: 0.9375rem;
+  }
 }
 
 .contact-input:focus,

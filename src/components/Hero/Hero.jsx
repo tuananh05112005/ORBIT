@@ -89,7 +89,7 @@ export default function Hero({ isLoaded }) {
           <span className="hero-hud__pulse"></span>
           <span>{t.hero.hudStatus}</span>
         </div>
-        <div>COORD: RA 19h 50m / DEC +08°52?</div>
+        <div>COORD: RA 19h 50m / DEC +08ï¿½52?</div>
         <div>{t.hero.hudNominal}</div>
       </div>
 

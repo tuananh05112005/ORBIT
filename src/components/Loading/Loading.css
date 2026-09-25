@@ -40,10 +40,10 @@
 
 .orbit-loading__title {
   font-family: var(--font-brand);
-  font-size: 2.75rem;
-  letter-spacing: 0.35em;
+  font-size: clamp(1.85rem, 6.5vw, 2.75rem);
+  letter-spacing: clamp(0.2em, 2vw, 0.35em);
   color: #ffffff;
-  margin-left: 0.35em;
+  margin-left: clamp(0.2em, 2vw, 0.35em);
   font-weight: 800;
 }
 

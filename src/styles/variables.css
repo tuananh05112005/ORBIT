@@ -24,18 +24,18 @@
   --font-brand: 'Syne', 'Space Grotesk', 'Be Vietnam Pro', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* Spacing */
+  /* Spacing - Responsive fluid scales */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
-  --space-lg: 2rem;
-  --space-xl: 3.5rem;
-  --space-2xl: 5.5rem;
-  --space-3xl: 8rem;
+  --space-lg: clamp(1.25rem, 2.5vw, 2rem);
+  --space-xl: clamp(2rem, 4vw, 3.5rem);
+  --space-2xl: clamp(3rem, 5.5vw, 5.5rem);
+  --space-3xl: clamp(4rem, 8vw, 8rem);
 
   /* Container */
   --container-max: 1320px;
-  --container-pad: clamp(1.25rem, 4vw, 3rem);
+  --container-pad: clamp(1rem, 3.5vw, 2.5rem);
 
   /* Radius */
   --radius-xs: 2px;
